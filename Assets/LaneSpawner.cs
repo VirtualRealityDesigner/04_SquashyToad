@@ -7,11 +7,12 @@ public class LaneSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        CreateRandomLane(0);
-        CreateRandomLane(10);
-        CreateRandomLane(20);
-        CreateRandomLane(30);
-        CreateRandomLane(40);
+        int offset = 0;
+        while (offset < 500)
+        {
+            CreateRandomLane(offset);
+            offset += 10;
+        }
     }
 
     void CreateRandomLane(float offset)

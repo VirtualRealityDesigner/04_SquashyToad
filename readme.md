@@ -12,3 +12,4 @@
 1. Jumping Only When Grounded
 1. Tile-based Terrain
 1. Procedurally Generated Terrain
+1. Generating Infinite Terrain

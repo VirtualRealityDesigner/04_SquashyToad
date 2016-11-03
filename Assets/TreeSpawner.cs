@@ -4,12 +4,15 @@ using System.Collections;
 public class TreeSpawner : MonoBehaviour {
 
     public GameObject TreePrefab;
+    public int minTrees = 5;
+    public int maxTrees = 15;
 
 	// Use this for initialization
 	void Start () {
-        CreateTree();
-        CreateTree();
-        CreateTree();
+        int treeNumber = Random.Range(minTrees, maxTrees);
+        for (int currentTree = 0; currentTree < treeNumber; currentTree++) {
+            CreateTree();
+        }
     }
 
     void CreateTree()
