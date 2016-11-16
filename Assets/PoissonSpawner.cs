@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CurveSpawner : MonoBehaviour {
+public class PoissonSpawner : MonoBehaviour {
 
     public float rate = 4;
     public float minimumGap = 2;
-    public GameObject prefab;
+    public float[] prefabProbabilities;
+    public GameObject[] prefabs;
     float nextArrivalTime = 0;
 
 	// Use this for initialization
@@ -17,16 +18,32 @@ public class CurveSpawner : MonoBehaviour {
 	void Update () {
         if(nextArrivalTime < Time.time)
         {
-            Spawn();
+            var prefab = ChoosePrefab();
+            Spawn(prefab);
             var interval = NextArrivalInterval();
             print(interval);
             nextArrivalTime = Time.time + interval;
         }
 	}
 
-    void Spawn()
+    void Spawn(GameObject prefab)
     {
         var instance = Instantiate(prefab, transform.position, transform.rotation, transform);
+    }
+
+    GameObject ChoosePrefab()
+    {
+        float cumProb = 0;
+        float p = Random.value;
+        for (int i = 0; i < prefabProbabilities.Length; i++)
+        {
+            cumProb += prefabProbabilities[i];
+            if (p <= cumProb)
+            {
+                return prefabs[i];
+            }
+        }
+        return null;
     }
 
     float NextArrivalInterval()
