@@ -10,8 +10,7 @@ public class VehicleMovement : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        transform.Translate(-velocity * Time.deltaTime, 0, 0);
+	void FixedUpdate () {
+        GetComponent<Rigidbody>().MovePosition(transform.position - Vector3.right * velocity * Time.deltaTime);
 	}
 }
