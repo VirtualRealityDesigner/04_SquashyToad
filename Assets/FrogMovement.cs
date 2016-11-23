@@ -8,18 +8,27 @@ public class FrogMovement : MonoBehaviour {
     public float jumpGroundClearance = 2;
     public float jumpSpeedTolerance = 5;
 
+    public int collisionCount = 0;
+
 	// Use this for initialization
 	void Start () {
 	
 	}
+
+    void OnCollisionEnter()
+    {
+        collisionCount++;
+    }
+
+    void OnCollisionExit()
+    {
+        collisionCount--;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        bool isOnGround = Physics.Raycast(transform.position, -transform.up, jumpGroundClearance);
-        Debug.DrawRay(transform.position, -transform.up * jumpGroundClearance);
-        var speed = GetComponent<Rigidbody>().velocity.magnitude;
-        bool isNearStationary = speed < jumpSpeedTolerance; 
-        if (GvrViewer.Instance.Triggered && isOnGround && isNearStationary)
+        bool isOnGround = collisionCount > 0;
+        if (GvrViewer.Instance.Triggered && isOnGround)
 		{
             var camera = GetComponentInChildren<Camera>();
             var projectedLookDirection = Vector3.ProjectOnPlane(camera.transform.forward, Vector3.up);
