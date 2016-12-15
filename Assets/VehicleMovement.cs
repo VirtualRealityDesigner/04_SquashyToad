@@ -3,7 +3,7 @@ using System.Collections;
 
 public class VehicleMovement : MonoBehaviour {
 
-    float velocity = 1000;
+    public float velocity = 1000;
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +11,6 @@ public class VehicleMovement : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-        GetComponent<Rigidbody>().MovePosition(transform.position - Vector3.right * velocity * Time.deltaTime);
+        GetComponent<Rigidbody>().MovePosition(transform.position - transform.right * velocity * Time.deltaTime);
 	}
 }
