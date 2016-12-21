@@ -4,6 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public void LoadNextScene()
     {
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
