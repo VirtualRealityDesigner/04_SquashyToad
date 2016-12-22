@@ -9,11 +9,12 @@ public class LaneSpawner : MonoBehaviour {
     public GameObject[] dangerousLanePrefabs;
     LaneType lastLaneType = LaneType.Safe;
     public float safeLaneRunProbability = 0.2f;
+    public float laneSpawnDistance = 50000;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         int offset = 0;
-        while (offset < 50000)
+        while (offset < laneSpawnDistance)
         {
             CreateRandomLane(offset);
             offset += 1000;
