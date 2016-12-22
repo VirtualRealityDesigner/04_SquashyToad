@@ -51,7 +51,7 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 4
     m_Resolution: 2
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   - {fileID: 1000010553421670, guid: 541bfc05faf292342b4f3f77851d8d7c, type: 2}
   - {fileID: 1000013248647282, guid: 7799150c2fcb65f4c97c41a4a2ae3f42, type: 2}
   safeLaneRunProbability: 0.2
-  laneSpawnDistance: 5000
+  laneSpawnDistance: 10000
 --- !u!4 &686733541
 Transform:
   m_ObjectHideFlags: 0
