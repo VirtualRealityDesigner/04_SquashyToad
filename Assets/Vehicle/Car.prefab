@@ -127,6 +127,7 @@ GameObject:
   - 54: {fileID: 54000011625204210}
   - 114: {fileID: 114000011012002934}
   - 114: {fileID: 114000010917961514}
+  - 114: {fileID: 114000010297245452}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -506,6 +507,35 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010297245452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013365417108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 1
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 0e5a91d681980fb4fbee92b99f90d312, type: 3}
+  sourceLoop: 1
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 50000
+  sourceMinDistance: 0
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!114 &114000010917961514
 MonoBehaviour:
   m_ObjectHideFlags: 1
