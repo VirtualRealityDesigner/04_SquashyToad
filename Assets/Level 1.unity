@@ -1465,6 +1465,7 @@ MonoBehaviour:
   - {fileID: 1000013248647282, guid: 7799150c2fcb65f4c97c41a4a2ae3f42, type: 2}
   safeLaneRunProbability: 0.2
   laneSpawnDistance: 10000
+  player: {fileID: 626451881}
 --- !u!4 &686733541
 Transform:
   m_ObjectHideFlags: 0
