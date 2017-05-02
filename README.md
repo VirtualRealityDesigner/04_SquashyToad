@@ -258,6 +258,3 @@
 + You're really getting into VR development now
 + Please vary the game and make it your own
 + Start the next section right away!
-
----
-Find out more about our [Virtual Reality Designer Course](https://www.udemy.com/vrcourse/?couponCode=GitHubDiscount).
