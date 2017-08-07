@@ -35,7 +35,7 @@ public class FrogMovement : MonoBehaviour {
             hopCount = 0;
         }
 
-        if (GvrViewer.Instance.Triggered && hopCount < jumpSpeedInCMPS.Length)
+        if (Input.GetMouseButtonDown(0) && hopCount < jumpSpeedInCMPS.Length)
 		{
             var camera = GetComponentInChildren<Camera>();
             var projectedLookDirection = Vector3.ProjectOnPlane(camera.transform.forward, Vector3.up);

@@ -1,260 +1,342 @@
-### Section 4 Introduction & Notes ###
+### 1 Becoming an Android Developer ###
 
-+ We’ll build a Crossy Road clone.
-+ We will call our clone Squashy Toad!
-+ Understand a basic VR camera.
-+ Simple one-button VR movement.
-+ Overview the Game Design Document (GDD).
-+ Download your section notes and assets.
++ Setup Android Studios.
++ Locating the SDK and JDK.
++ Installing the Android SDK.
++ Enabling your phones developer mode.
 
-### Setting up for Android development ###
+### 2 Building an Unity Android Project ###
 
-+ Setup your environment
-+ Build the Google Cardboard Demo
-+ Deploy to your Android phone
++ Connecting the SDK to Unity.
++ Installing Unity modules individually.
++ Build the Google Cardboard Demo.
++ Deploy to your Android phone.
 
-### Setting up for iOS development ###
+### 3 Becoming an iOS Developer ###
 
-+ Setup your environment
-+ Build the Google Cardboard Demo
-+ Deploy to your iOS phone
++ Setup XCode.
++ Configuring an iOS app to deploy.
++ Signing Identities and Provisioning Profiles
++ Deploying your first app.
 
-### How to Access Source Code ###
+### 4 Building an Unity iOS Project ###
 
++ Setup your environment.
++ Build an empty project.
++ Setting your bundle identifier in Unity.
++ Deploy to your iOS phone.
 
-
-### Setup a VR Camera b ###
+### 5 Setup a VR Camera ###
 
 + Create a virtual environment.
++ Overview of the Google VR stack.
 + Add stereoscopic cameras to games.
 + Push to your device.
 
-### VR Gaze Tracking ###
+### 5b How to Use GVR 1.70 + Unity 5.6 ###
 
-+ Learn about gaze tracking.
-+ Test prototypes in Unity.
++ How to upgrade you GVR plugin.
++ Enabling built in Google VR in Unity 5.6.
++ Changes to the event system.
++ How to detect trigger down.
++ Issues with sound scaling.
 
-### UI in VR Environments b ###
+### 6 UI in VR Environments ###
 
++ Setting font size and DPI.
++ Where to scale a Rect Transform.
 + Create UI in VR environments.
 + Position and scale for comfort.
-+ Updating UI programmatically.
 
-### Handling OnTrigger Events ###
+### 7 Interacting with Buttons in VR ###
 
-+ Handle OnTrigger Events.
-+ Use it to manipulate the environment.
++ Activating UI with Gaze.
++ Revising event based UI.
++ Revising the scene management.
 
-### Building for the GearVR ###
+### 8 Google VR Spatial Audio Sources ###
 
-+ Build settings for Unity VR.
-+ Using the ADB.
-+ Obtaining an Oculus Signature (OSIG).
-+ Deploying to the GearVR.
++ What is spatial audio?
++ How can we use it in a menu scene.
++ The GVR audio listener and source.
++ Enabling the spatializer plugin.
 
-### Converting a Scene to GearVR ###
-
-+ How to preview without a Rift.
-+ Removing the Cardboard SDK.
-+ Converting from Cardboard to GearVR.
-
-### Previewing Gaze in GearVR ###
-
-+ Using scripts to emulate Gaze.
-+ Reusing other people’s code.
-
-### Gaze Tracking in GearVR ###
-
-+ How VR manipulates the camera.
-+ Getting a gaze vector from our camera.
-+ Applying quaternion rotations.
-
-### GearVR Touchpad Input ###
-
-+ How to access the GearVR Touchpad.
-+ Revision of GetAxis.
-+ Revision of GetButtonDown.
-
-### Adding Physics to VR Cameras ###
+### 9 Avoiding Motion Sickness ###
 
 + Use physics simulation to hop.
++ Editing terrain in the Unity Editor.
 + Adjust rigidbody mechanics for sickness.
 + Tweak materials for frog behaviour.
++ Introducing physics materials.
 
-### Natural Jumping in VR ###
+### 10 Debugging Vectors in Unity ###
 
-+ Expose jumping angles to the game designer.
-+ Reduce motion sickness in acceleration.
-+ Stop the toad from flying.
++ Projecting vectors onto planes.
++ Rotating and normalizing vectors.
++ Drawing debug lines in Unity.
 
-### Scaling Down to Toad Size ###
+### 11 Advanced Vector Manipulation ###
 
-+ Challenges of small VR heads
-+ Preventing near culling in Google Cardboard
-+ Changing the neck model scale
-+ Scaling the physics
++ Getting the look vector of the camera.
++ Sequencing vector operations.
++ Presenting an easy interface to the designer.
 
-### Procedurally generating terrain ###
+### 12 Jumping Only When Grounded ###
+
++ Getting trigger input from GVR.
++ Using Physics.Raycast().
++ Preventing jumping unless grounded.
+
+### 13 Tile-based Terrain ###
+
++ Creating a tile-based level.
++ Importing our assets.
++ Adding materials and textures.
+
+### 14 Procedurally Generated Terrain ###
 
 + Creating lanes of traffic.
++ Generating random numbers.
++ Randomly selecting terrain.
 + Exposing terrain to the designer.
 
-### Generating Infinite Terrain b ###
+### 15 Generating Infinite Terrain ###
+
++ Spawning a random number of trees.
++ Removing code repetition.
++ for and while loops.
+
+### 16 Scaling Down or Up ###
+
++ How to scale Unity units.
++ Altering gravity acceleration.
++ Copying component values.
+
+### 17 Creating Nested Prefabs ###
+
++ The problem with nested prefabs.
++ How to work around the problem.
++ Adding a collider to our tree.
+
+### 18 Moving Cars with Kinematic Colliders ###
+
++ Adding car prefabs to the road.
++ Giving them non-physical velocity.
++ Ensuring they can impact the toad.
++ Understanding Kinematic Colliders.
++ Creating a log prefab.
+
+### 19 Spawning Cars Randomly ###
+
++ Spawning cars with a time interval.
++ Spawning at a given location.
++ Randomizing the time interval.
+
+### 20 Understanding Bell Curves ###
+
++ Probability Density Functions
++ Cumulative Distributions Functions
++ How to make any distribution in Unity
+
+### 21 Simulating Random Traffic ###
+
++ What is a Poisson process.
++ Looking at the Exponential distribution.
++ Implementing the Exponential in Unity.
+
+### 22 Moving Rigidbodies Smoothly ###
+
++ Overview of FixedUpdate().
++ Understanding the physics engine cycle.
++ Making the logs carry the frog.
+
+### 23 Count-based Grounding Checks ###
+
++ The issue with trigger-based grounding.
++ Why boolean grounding won’t work.
++ An explanation of count-based grounding.
++ Using this to fix jumping on moving platforms.
+
+### 24 Double and Triple Hop Jumping ###
+
++ Recap for using arrays.
++ Array constant syntax.
++ Understanding array indexing and length.
++ Implementing multi-hop jumping.
+
+### 25 Understanding 3D Rotation ###
+
++ Rotations in Unity.
++ Euler angle definition of rotation.
++ Angle axis rotations.
++ The importance of rotation order.
+
+### 26 Creating Rotations from Vectors ###
+
++ An overview of the Quaternion class.
++ Creating rotations between 2 vectors.
++ Keeping the horizon level with LookRotation.
++ Rotating a cube to hover in-front of us.
+
+### 27 HUD UI and Level Reload ###
+
++ How to reload the current level.
++ Setting up the HUD UI.
++ Revising UI button binding.
+
+### 28 Lethal Objects and Death Notification ###
+
++ Finding objects from anywhere in the scene.
++ How to notify death.
++ Fixing out multi-hop bug.
+
+### 29 Pausing Game Mechanics ###
+
++ Disabling movement on death.
++ Adding a safe starting point.
++ Enabling/disabling the reticule.
+
+### 30 Garbage Collecting GameObjects ###
+
++ Debugging performance slow downs.
++ Destroying old vehicles.
++ Triggers vs Colliders.
+
+### 31 Enums for Labeled Numbers ###
+
++ How to label “magic” numbers.
++ Preventing runs of dangerous lanes.
++ Enum types and when to use them.
+
+### 32 Locking the Cursor ###
+
++ Using our Enum knowledge.
++ The Cursor API in Unity.
++ Locking the cursor to the screen.
+
+### 33 Basic Performance Benchmarking ###
+
++ Introduction to the performance cycle.
++ How to display FPS in our game.
++ Getting a benchmark for performance.
++ Cutting down our game.
++ Disabling VSync.
+
+### 34 Performance Optimization Loop ###
+
++ Common optimisations to try.
++ Using the iterative process.
++ Unity quality settings.
+
+### 35 Unity Profiler on Mobile ###
+
++ Using the Unity Profiler.
++ Profiler hierarchies.
++ Profiler timeline.
++ Diagnosing script issues.
+
+### 36 Challenge - Add Level Audio ###
+
++ Revising spatial audio.
++ Creating immersive sound.
++ Adding audio to our level.
+
+### 37 Spawning and Destroying Lanes ###
+
++ Using a foreach loop.
++ How to get child transforms.
++ Spawning new lanes with a buffer.
++ Destroying lanes with a buffer.
++ Ideas for continuing the game.
+
+### 38 Generating Infinite Terrain b ###
 
 + Spawning lanes up to a horizon.
 + Generating new lanes after movement.
 + Randomly selecting terrain.
 
-### Checking a Rigidbody is Grounded ###
-
-+ Problems with current approach
-+ Review various solutions
-+ Evaluate their various merits
-
-### Creating a Froggy Inferno ###
+### 39 Creating a Froggy Inferno ###
 
 + Learn to make fire! [Read with caveman voice]
 + Create infinitely wide particle systems.
 + Mirror the players movements
 
-### Motivating the Player to Move ###
+### 40 Motivating the Player to Move ###
 
 + Make the fire creep forward naturally.
 + Tweak the fire to be engrossing.
 
-### Creating a VR Splash Screen ###
+### 41 Creating a VR Splash Screen ###
 
 + Create an all encompassing splash screen.
 + Use your gaze to control the UI.
 
-### Loading the Game ###
-
-+ Fix contention between input systems.
-+ Make the button load the main scene.
-+ Workaround for LoadLevel() changing lighting.
-
-### In-Game Menus in VR ###
+### 42 In-Game Menus in VR ###
 
 + Set up an in-game menu.
 + Include buttons to reset and go back.
 + Recap EventSystem setup in VR.
 
-### Resetting the Game ###
+### 43 Resetting the Game ###
 
 + Creating an object to manage game state.
 + How to reset the game.
 + Hook up the buttons to these actions.
 
-### Creating a Head-up Display ###
+### 44 Creating a Head-up Display ###
 
 + Create a head-up display.
 + Follow the player’s rotation and translation.
 + Prevent clipping with the floor.
 
-### Killing Off the Frog ###
+### 45 Killing Off the Frog ###
 
 + How to detect that the game is over.
 + Accessing that state from other objects.
 + Displaying the game over message.
 
-### Spawning the Vehicles ###
+### 46 Spawning the Vehicles ###
 
 + Creating van and car prefabs.
 + Instantiating at run-time.
 + Positioning them relative to a parent.
 + Configuring their offsets.
 
-### Halting the Game Mechanics ###
+### 47 Halting the Game Mechanics ###
 
 + Holding the state where the player died.
 + Pausing the fire’s progression.
 + Preventing the player jumping.
 
-### Making the Vehicles Move ###
+### 48 Making the Vehicles Move ###
 
 + Adding speed to the vehicles.
 + Making the speed a property of lanes.
 + Exposing lane speed to the designer.
 
-### Destroying Used Cars ###
+### 49 Destroying Used Cars ###
 
 + Destroying the vehicles at the end of lanes.
 + Allowing the designer to configure length.
 
-### Randomly Spawning Vehicles ###
+### 50 Randomly Spawning Vehicles ###
 
 
 
-### Cusps and Glitches ###
+### 51 Cusps and Glitches ###
 
 + We investigate a glitch.
 + How cusps cause collision issues.
 + Solve the glitch.
 
-### Squashy Car Death ###
+### 52 Squashy Car Death ###
 
 + How to squash a toad.
 + A revision of dynamic vs static colliders.
 + Excluding certain collisions programmatically.
 
-### Debugging Graphical Issues ###
+### 53 Debugging Graphical Issues ###
 
 + Hypothesis generation and testing.
 + Fixing hard to Google graphical bugs.
 + Fixing a graphical bug on the Galaxy Note 4.
-
-### Finding The Performance Ceiling ###
-
-+ Benchmarking your device.
-+ Basic performance tooling.
-
-### Using the Profiler on Mobile ###
-
-+ Understanding profiler traces.
-+ Attaching the profiler to mobile devices.
-+ Tweaking build settings for performance.
-
-### Improving Scene Performance ###
-
-+ Debugging performance issues in a scene.
-+ Using the profiler to inform our guesses.
-+ Making our game run at >40FPS.
-
-### Including the Assets ###
-
-+ Import the Squashy Toad asset pack.
-+ Apply a texture to our road.
-+ Replace our vehicles with models.
-
-### Creating a Splash Screen ###
-
-+ Adding a static splash screen.
-+ Using better scene naming.
-+ Loading scenes by build order.
-+ Loading scenes after a delay.
-
-### Sharing Code Between Scenes ###
-
-+ Renaming classes with Visual Studio.
-+ Centralise the scene loading logic.
-+ Generalising the SceneLoader.
-+ Using the SceneLoader in all scenes.
-
-### Sharing State Between Scenes ###
-
-+ Sharing state between scenes.
-+ Avoiding the singleton anti-pattern.
-+ Updating UI text to display dynamic data.
-+ Using getters and setters in C#.
-
-### Destroying Burnt Lanes ###
-
-+ Clearing up for better performance.
-+ Revising Rigidbody Trigger Colliders.
-
-### Section 4 Wrap-Up ###
-
-+ CONGRATULATIONS on a huge section
-+ You're really getting into VR development now
-+ Please vary the game and make it your own
-+ Start the next section right away!
